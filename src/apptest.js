@@ -22,3 +22,16 @@ test('Weather card check in the footer',async t => {
     .expect(Selector('.l-footer__tools--weather').exists).ok('Weather card is available in footer')
     .expect(Selector('.el-weather__footer-temperature .js-temp').innerText).within(0,100)
 })
+
+
+test('Hamburger navigation opens', async t => {
+    await t
+    .click(Selector('#menu'))
+    .expect(Selector('.nav-open').exists).ok();
+});
+
+test('Weather card check in the footer',async t => {
+    await t
+    .expect(Selector('.l-footer__tools--weather').exists).ok('Weather card is available in footer')
+    .expect(Selector('.el-weather__footer-temperature .js-temp').innerText).within(0,100)
+})
